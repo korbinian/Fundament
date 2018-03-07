@@ -1,0 +1,38 @@
+/*	HELPERS 
+//////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Debug Classes */
+
+.icon-grid {
+    position: fixed;
+    z-index: 99999;
+    bottom: $spacing-m;
+    left: $spacing-m;
+    width: $spacing-l;
+    height: $spacing-l;
+    cursor: pointer;
+    background: red;
+}
+
+.overlay {
+    opacity: 0;
+}
+
+.has-debug_overlay .overlay {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 1;
+    margin: 0 auto;
+    @media (min-width: 960px) {
+        background: url('../assets/grid-64rem_1280px.svg') repeat-y;
+        max-width: 64rem;
+        background-size: 100%;
+    }
+}

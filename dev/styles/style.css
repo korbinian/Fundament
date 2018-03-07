@@ -1,0 +1,404 @@
+/*//////////////////////////////////////////////////////////////////////////////
+//	1 BASE
+//////////////////////////////////////////////////////////////////////////////*/
+/*	GENERIC 
+//////////////////////////////////////////////////////////////////////////////*/
+html {
+  box-sizing: border-box;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section, figcaption, figure, main, details, menu {
+  display: block;
+}
+
+/*	TYPOGRAPHY 
+//////////////////////////////////////////////////////////////////////////////*/
+@font-face {
+  font-family: 'BLOKK';
+  src: url("../fonts/BLOKKNeue-Regular/BLOKKNeue-Regular.woff") format("woff");
+  font-style: normal;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+code, pre {
+  font-family: monospace;
+}
+
+body {
+  color: black;
+}
+
+a {
+  color: blue;
+}
+
+::-moz-selection {
+  color: white;
+  background: blue;
+}
+
+::selection {
+  color: white;
+  background: blue;
+}
+
+html {
+  font-size: 14px;
+  line-height: 1.25;
+}
+@media (min-width: 320px) {
+  html {
+    font-size: calc(0.90909vw + 11.09091px);
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: calc(0vw + 16px);
+  }
+}
+@media (min-width: 840px) {
+  html {
+    font-size: calc(1.11111vw + 6.66667px);
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: calc(0.66667vw + 12px);
+  }
+}
+@media (min-width: 1800px) {
+  html {
+    font-size: calc(1vw + 6px);
+  }
+}
+@media (min-width: 2400px) {
+  html {
+    font-size: calc(0.5vw + 18px);
+  }
+}
+@media (min-width: 3600px) {
+  html {
+    font-size: 36px;
+  }
+}
+
+.text-s, small {
+  font-size: 0.8em;
+}
+
+.text-m, * {
+  font-size: 1em;
+}
+
+.text-l, h3, h4, h5, h6 {
+  font-size: 1.25em;
+}
+
+.text-xl, h2 {
+  font-size: 1.5625em;
+}
+
+.text-xxl, h1 {
+  font-size: 1.95313em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+/*	SPACING 
+//////////////////////////////////////////////////////////////////////////////*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* > *:last-child {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, table, form, article, section {
+  margin-bottom: 1rem;
+}
+
+/*	FORMS 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	TABLES 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	LISTS 
+//////////////////////////////////////////////////////////////////////////////*/
+nav ul {
+  list-style: none;
+}
+
+/*	LINKS 
+//////////////////////////////////////////////////////////////////////////////*/
+a {
+  text-decoration: none;
+  display: inline-block;
+  background-image: -webkit-linear-gradient(bottom, currentColor, currentColor 1px, transparent 1px);
+  background-image: linear-gradient(to top, currentColor, currentColor 1px, transparent 1px);
+}
+a:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+/*	MEDIA 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	HELPERS 
+//////////////////////////////////////////////////////////////////////////////*/
+/* Debug Classes */
+.icon-grid {
+  position: fixed;
+  z-index: 99999;
+  bottom: 1rem;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background: red;
+}
+
+.overlay {
+  opacity: 0;
+}
+
+.has-debug_overlay .overlay {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: opacity .5s;
+          transition: opacity .5s;
+  pointer-events: none;
+  opacity: 1;
+  margin: 0 auto;
+}
+@media (min-width: 960px) {
+  .has-debug_overlay .overlay {
+    background: url("../assets/grid-64rem_1280px.svg") repeat-y;
+    max-width: 64rem;
+    background-size: 100%;
+  }
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+//	2 SECTIONS
+//////////////////////////////////////////////////////////////////////////////*/
+/*	HEADER 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	NAVIGATION 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	MAIN 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	SIDEBAR 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	FOOTER 
+//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////
+//	3 COMPONENTS
+//////////////////////////////////////////////////////////////////////////////*/
+/*	BRANDING 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	BOX 
+//////////////////////////////////////////////////////////////////////////////*/
+.box {
+  outline: 1px solid;
+  margin-bottom: 1rem;
+}
+
+.box-xs {
+  padding: 0.25rem;
+}
+
+.box-s {
+  padding: 0.5rem;
+}
+
+.box-m {
+  padding: 1rem;
+}
+
+.box-l {
+  padding: 2rem;
+}
+
+.box-xl {
+  padding: 4rem;
+}
+
+.box-xxl {
+  padding: 8rem;
+}
+
+/*	MODULE 
+//////////////////////////////////////////////////////////////////////////////*/
+.module {
+  max-width: 30em;
+}
+
+.module-s {
+  font-size: 0.8em;
+}
+
+.module-l {
+  font-size: 1.25em;
+}
+
+.module-xl {
+  font-size: 1.5625em;
+}
+
+.module-xxl {
+  font-size: 1.95313em;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+//	4 LAYOUTS
+//////////////////////////////////////////////////////////////////////////////*/
+/*	DEFAULT PAGE LAYOUT 
+//////////////////////////////////////////////////////////////////////////////*/
+.row {
+  margin: 0 auto;
+  max-width: 64rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 0;
+}
+.cols .col-1, .cols .col-2, .cols .col-3, .cols .col-4, .cols .col-5, .cols .col-6, .cols .col-7, .cols .col-8, .cols .col-9, .cols .col-10, .cols .col-11, .cols .col-12, .cols .col-33, .cols .col-50, .cols .col-66, .cols .col-25, .cols .col-75 {
+  padding: 0 1rem;
+}
+@media (min-width: 960px) {
+  .cols .col-1, .cols .col-2, .cols .col-3, .cols .col-4, .cols .col-5, .cols .col-6, .cols .col-7, .cols .col-8, .cols .col-9, .cols .col-10, .cols .col-11, .cols .col-12, .cols .col-33, .cols .col-50, .cols .col-66, .cols .col-25, .cols .col-75 {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .cols .col-1 {
+    -ms-flex-preferred-size: calc(100% / 12 * 1);
+        flex-basis: calc(100% / 12 * 1);
+  }
+  .cols .col-2 {
+    -ms-flex-preferred-size: calc(100% / 12 * 2);
+        flex-basis: calc(100% / 12 * 2);
+  }
+  .cols .col-3 {
+    -ms-flex-preferred-size: calc(100% / 12 * 3);
+        flex-basis: calc(100% / 12 * 3);
+  }
+  .cols .col-4 {
+    -ms-flex-preferred-size: calc(100% / 12 * 4);
+        flex-basis: calc(100% / 12 * 4);
+  }
+  .cols .col-5 {
+    -ms-flex-preferred-size: calc(100% / 12 * 5);
+        flex-basis: calc(100% / 12 * 5);
+  }
+  .cols .col-6 {
+    -ms-flex-preferred-size: calc(100% / 12 * 6);
+        flex-basis: calc(100% / 12 * 6);
+  }
+  .cols .col-7 {
+    -ms-flex-preferred-size: calc(100% / 12 * 7);
+        flex-basis: calc(100% / 12 * 7);
+  }
+  .cols .col-8 {
+    -ms-flex-preferred-size: calc(100% / 12 * 8);
+        flex-basis: calc(100% / 12 * 8);
+  }
+  .cols .col-9 {
+    -ms-flex-preferred-size: calc(100% / 12 * 9);
+        flex-basis: calc(100% / 12 * 9);
+  }
+  .cols .col-10 {
+    -ms-flex-preferred-size: calc(100% / 12 * 10);
+        flex-basis: calc(100% / 12 * 10);
+  }
+  .cols .col-11 {
+    -ms-flex-preferred-size: calc(100% / 12 * 11);
+        flex-basis: calc(100% / 12 * 11);
+  }
+  .cols .col-12 {
+    -ms-flex-preferred-size: calc(100% / 12 * 12);
+        flex-basis: calc(100% / 12 * 12);
+  }
+  .cols .col-25 {
+    -ms-flex-preferred-size: calc(100% / 4);
+        flex-basis: calc(100% / 4);
+  }
+  .cols .col-33 {
+    -ms-flex-preferred-size: calc(100% / 3);
+        flex-basis: calc(100% / 3);
+  }
+  .cols .col-50 {
+    -ms-flex-preferred-size: calc(100% / 2);
+        flex-basis: calc(100% / 2);
+  }
+  .cols .col-66 {
+    -ms-flex-preferred-size: calc(100% / 3 * 2);
+        flex-basis: calc(100% / 3 * 2);
+  }
+  .cols .col-75 {
+    -ms-flex-preferred-size: calc(100% / 4 * 3);
+        flex-basis: calc(100% / 4 * 3);
+  }
+}
+
+.cols .box {
+  smargin: 1rem;
+}
+
+/*	PRINT 
+//////////////////////////////////////////////////////////////////////////////*/
+section {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid;
+}
+
+/*
+
+[class^="site-"] {
+	position: relative;
+	outline: 1px solid;
+    &:after {
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    	display: block;
+    	content: attr(class);
+    	font-family: $font-family-code;
+    }
+} */

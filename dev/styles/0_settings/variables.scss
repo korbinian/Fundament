@@ -1,0 +1,66 @@
+//	VARIABLES 
+////////////////////////////////////////////////////////////////////////////////
+// colors
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$blue: rgb(0, 0, 255);
+$page-width-s: 640;
+$page-width-m: 960;
+$page-width-l: 1200;
+// breakpoints
+$breakpoint-s: 720;
+$breakpoint-m: 960;
+$breakpoint-l: 1080;
+$breakpoint-xl: 1200;
+$bp-mobile-portrait: 540px;
+$bp-mobile-landscape: 840px;
+$bp-tablet-portrait: 1140px;
+$bp-tablet-landscape: 1440px;
+$bp-desktop-s: 1200px;
+$bp-desktop-m: 1800px;
+$bp-desktop-l: 2400px;
+$bp-desktop-xl: 3600px;
+// font stacks
+$font-stack-display: arial, helvetica;
+$font-stack-copy: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-stack-code: monospace;
+$font-stack-placeholder: "BLOKK";
+// font sizes
+$font-size-s: 12px;
+$line-height-m: 1.25;
+$font-size-max: 20;
+$font-size-min: 16;
+$page-width: 60rem;
+// typographic scale
+$scale: 1.25;
+$spacing-xs: .25rem;
+$spacing-s: .5rem;
+$spacing-m: 1rem;
+$spacing-l: 2rem;
+$spacing-xl: 4rem;
+$spacing-xxl: 8rem;
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+// display sizes
+$iphone4-width: 320px;
+$iphone4-height: 480px;
+$iphone5-width: 320px;
+$iphone5-height: 568px;
+$iphone6-width: 375px;
+$iphone6-height: 667px;
+$iphone7-width: 375px;
+$iphone7-height: 667px;
+$iphone8-width: 375px;
+$iphone8-height: 667px;
+$iphone6p-width: 414px;
+$iphone6p-height: 736px;
+$iphone7p-width: 414px;
+$iphone7p-height: 736px;
+$iphone8p-width: 414px;
+$iphone8p-height: 736px;
+$iphoneX-width: 375px;
+$iphoneX-heigth: 812px;

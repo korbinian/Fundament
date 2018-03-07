@@ -1,0 +1,21 @@
+/*	LINKS 
+//////////////////////////////////////////////////////////////////////////////*/
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	background-image: 
+		linear-gradient(to top, currentColor, currentColor 1px, transparent 1px);
+	&:link {
+
+	}
+	&:visited {
+
+	}
+	&:hover {
+		
+	}
+	&:active{
+		transform: translateY(1px);
+	}
+}

@@ -1,0 +1,97 @@
+/*	TYPOGRAPHY 
+//////////////////////////////////////////////////////////////////////////////*/
+
+@font-face {
+    font-family: 'BLOKK';
+    src: url('../fonts/BLOKKNeue-Regular/BLOKKNeue-Regular.woff') format('woff');
+    font-style: normal;
+}
+
+//  Font Stacks
+body {
+    font-family: $font-stack-copy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-stack-copy;
+}
+
+code, pre {
+    font-family: $font-stack-code;
+}
+
+// Text Colors
+body {
+    color: $black;
+}
+
+a {
+    color: $blue;
+}
+
+::-moz-selection {
+    color: $white;
+    background: $blue;
+}
+
+::selection {
+    color: $white;
+    background: $blue;
+}
+
+//	Responsive Typography
+//  
+//  px  on Root
+//  em  on Elements
+//  rem on Modules
+html {
+    $map: (320px: 14px, 540px: 16px, 840px: 16px, 1200px: 20px, 1800px: 24px, 2400px: 30px, 3600px: 36px);
+    @include poly-fluid-sizing('font-size', $map);
+    line-height: $line-height-m;
+}
+
+//	Typographic Scale
+.text-s {
+    font-size: #{1 / $scale}em;
+}
+
+.text-m {
+    font-size: 1em;
+}
+
+.text-l {
+    font-size: #{$scale}em;
+}
+
+.text-xl {
+    font-size: #{$scale*$scale}em;
+}
+
+.text-xxl {
+    font-size: #{$scale*$scale*$scale}em;
+}
+
+* {
+    @extend .text-m;
+}
+
+h1 {
+    @extend .text-xxl;
+}
+
+h2 {
+    @extend .text-xl;
+}
+
+h3, h4, h5, h6 {
+    @extend .text-l;
+}
+
+small {
+    @extend .text-s;
+}
+
+// Text Styles
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-weight-normal;
+}
