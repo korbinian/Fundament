@@ -27,29 +27,60 @@ article, aside, footer, header, nav, section, figcaption, figure, main, details,
 
 /*	TYPOGRAPHY 
 //////////////////////////////////////////////////////////////////////////////*/
-@font-face {
-  font-family: 'BLOKK';
-  src: url("../fonts/BLOKKNeue-Regular/BLOKKNeue-Regular.woff") format("woff");
-  font-style: normal;
+:root {
+  font-size: 14px;
+  line-height: 1.25;
 }
+@media (min-width: 320px) {
+  :root {
+    font-size: calc(0.90909vw + 11.09091px);
+  }
+}
+@media (min-width: 540px) {
+  :root {
+    font-size: calc(0vw + 16px);
+  }
+}
+@media (min-width: 840px) {
+  :root {
+    font-size: calc(1.11111vw + 6.66667px);
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    font-size: calc(0.66667vw + 12px);
+  }
+}
+@media (min-width: 1800px) {
+  :root {
+    font-size: calc(1vw + 6px);
+  }
+}
+@media (min-width: 2400px) {
+  :root {
+    font-size: calc(0.5vw + 18px);
+  }
+}
+@media (min-width: 3600px) {
+  :root {
+    font-size: 36px;
+  }
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-
-code, pre {
-  font-family: monospace;
-}
-
-body {
+  font-family: "Inter UI", sans-serif;
+  font-weight: 400;
   color: black;
 }
 
-a {
-  color: blue;
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter UI var", sans-serif;
+  }
+}
+code,
+pre {
+  font-family: monospace;
 }
 
 ::-moz-selection {
@@ -62,68 +93,16 @@ a {
   background: blue;
 }
 
-html {
-  font-size: 14px;
-  line-height: 1.25;
-}
-@media (min-width: 320px) {
-  html {
-    font-size: calc(0.90909vw + 11.09091px);
-  }
-}
-@media (min-width: 540px) {
-  html {
-    font-size: calc(0vw + 16px);
-  }
-}
-@media (min-width: 840px) {
-  html {
-    font-size: calc(1.11111vw + 6.66667px);
-  }
-}
-@media (min-width: 1200px) {
-  html {
-    font-size: calc(0.66667vw + 12px);
-  }
-}
-@media (min-width: 1800px) {
-  html {
-    font-size: calc(1vw + 6px);
-  }
-}
-@media (min-width: 2400px) {
-  html {
-    font-size: calc(0.5vw + 18px);
-  }
-}
-@media (min-width: 3600px) {
-  html {
-    font-size: 36px;
-  }
-}
-
-.text-s, small {
-  font-size: 0.8em;
-}
-
-.text-m, * {
-  font-size: 1em;
-}
-
-.text-l, h3, h4, h5, h6 {
-  font-size: 1.25em;
-}
-
-.text-xl, h2 {
-  font-size: 1.5625em;
-}
-
-.text-xxl, h1 {
-  font-size: 1.95313em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+em,
+b {
+  font-weight: 700;
 }
 
 /*	SPACING 
@@ -143,6 +122,12 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl, table, form, article, section {
 
 /*	FORMS 
 //////////////////////////////////////////////////////////////////////////////*/
+input,
+select,
+button {
+  font: inherit;
+}
+
 /*	TABLES 
 //////////////////////////////////////////////////////////////////////////////*/
 /*	LISTS 
@@ -154,6 +139,7 @@ nav ul {
 /*	LINKS 
 //////////////////////////////////////////////////////////////////////////////*/
 a {
+  color: inherit;
   text-decoration: none;
   display: inline-block;
   background-image: -webkit-linear-gradient(bottom, currentColor, currentColor 1px, transparent 1px);

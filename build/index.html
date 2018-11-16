@@ -1,81 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js " lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Title of the Page</title>
+        <meta
+            name="description"
+            content="This is the description of the page"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, minimum-scale=1.0, initial-scale=1.0"
+        />
+        <link rel="apple-touch-icon" href="icon.png" />
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Title of the Page</title>
-    <meta name="description" content="This is the description of the page">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="styles/style.css">
-</head>
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
 
-<body>
+    <body>
+        <header class="site-header">
+            <div class="row">
+                <h1 class="site-branding">
+                    <div class="site-branding__logo">
+                        <picture>
+                            <source
+                                srcset="images/icons/logo-big.svg"
+                                media="(min-width: 800px)"
+                            />
+                            <source
+                                srcset="images/icons/logo-small.svg"
+                                media="(max-width: 799px)"
+                            />
+                            <img
+                                src="images/icons/logo-small.png"
+                                class="site-branding__logo--fallback"
+                                alt="Some Logo"
+                            />
+                        </picture>
+                    </div>
 
-    <header class="site-header">
-        <div class="row">
-            <h1 class="site-branding">
-                <div class="site-branding__logo">
-                    <picture>
-                        <source srcset="images/icons/logo-big.svg" media="(min-width: 800px)">
-                        <source srcset="images/icons/logo-small.svg" media="(max-width: 799px)">
-                        <img src="images/icons/logo-small.png" class="site-branding__logo--fallback" alt="Some Logo">
-                    </picture>
-                </div>
+                    <div class="site-branding__title">
+                        <a href="/">Site-Title</a>
+                    </div>
+                    <div class="site-branding__tagline">Site-Tagline</div>
+                </h1>
+                <nav class="site-nav">
+                    <ul class="menu">
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-                <div class="site-branding__title"><a href="/">Site-Title</a></div>
-                <div class="site-branding__tagline">Site-Tagline</div>
-            </h1>
-            <nav class="site-nav">
-                <ul class="menu">
-                    <li><a href="">Link 1</a></li>
-                    <li><a href="">Link 2</a></li>
-                    <li><a href="">Link 3</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <main class="site-main">
+            <div class="row">
+                <section class="site-content page"></section>
+                <aside class="site-sidebar"></aside>
+            </div>
+        </main>
 
-    <main class="site-main">
-        <div class="row">
-            <section class="site-content page">
+        <div class="site-footer"><div class="row"></div></div>
 
-            </section>
-            <aside class="site-sidebar">
+        <!--
+            <script src="scripts/lib/mobile-detect.js"></script>
+            <script>
+                var md = new MobileDetect(window.navigator.userAgent);
+            </script>
+        -->
+        <!-- <script src="scripts/lib/modernizr-3.5.0.min.js"></script> -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            window.jQuery ||
+                document.write(
+                    '<script src="scripts/lib/jquery-3.3.1.min.js"><\/script>'
+                );
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+        <script src="scripts/script.min.js"></script>
 
-            </aside>
-        </div>
-    </main>
-
-    <div class="site-footer">
-        <div class="row">
-
-        </div>
-    </div>
-
-    <!--<script src="scripts/lib/mobile-detect.js"></script>
-    <script>
-        var md = new MobileDetect(window.navigator.userAgent);
-    </script>
-    -->
-    <script src="scripts/lib/modernizr-3.5.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="scripts/lib/jquery-3.3.1.min.js"><\/script>')
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-    <script src="scripts/script.min.js"></script>
-    <script>
-        WebFont.load({
-            google: {
-                families: ['Roboto']
-            },
-            custom: {
-                families: ['BLOKK']
-            }
-        });
-    </script>
-</body>
-
+        <script>
+            WebFont.load({
+                /*
+                google: {
+                    families: ["Roboto"]
+                }, */
+                custom: {
+                    families: ["Inter UI var", "Inter UI"],
+                    urls: ["styles/fonts.css"]
+                }
+            });
+        </script>
+    </body>
 </html>

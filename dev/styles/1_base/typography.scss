@@ -1,56 +1,12 @@
 /*	TYPOGRAPHY 
 //////////////////////////////////////////////////////////////////////////////*/
 
-//  Font Stacks
-body {
-    font-family: $font-stack-copy;
-}
-
-input,
-select,
-button {
-    font: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $font-stack-copy;
-}
-
-code,
-pre {
-    font-family: $font-stack-code;
-}
-
-// Text Colors
-body {
-    color: $black;
-}
-
-a {
-    color: inherit;
-}
-
-::-moz-selection {
-    color: $white;
-    background: $blue;
-}
-
-::selection {
-    color: $white;
-    background: $blue;
-}
-
-//	Responsive Typography
+//	Responsive Font-Sizing
 //
-//  px  on Root
-//  em  on Elements
-//  rem on Modules
-html {
+//  px  on root
+//  rem on everything else
+
+:root {
     $map: (
         320px: 14px,
         540px: 16px,
@@ -64,56 +20,44 @@ html {
     line-height: $line-height-m;
 }
 
-//	Typographic Scale
-.text-s {
-    font-size: #{1 / $scale}em;
+// Single variable font with static fallback.
+
+body {
+    font-family: $font-stack-ui;
+    font-weight: $font-weight-normal;
+    color: $color-text;
+}
+@supports (font-variation-settings: normal) {
+    body {
+        font-family: $font-stack-ui-var;
+    }
 }
 
-.text-m {
-    font-size: 1em;
+code,
+pre {
+    font-family: $font-stack-code;
 }
 
-.text-l {
-    font-size: #{$scale}em;
+::-moz-selection {
+    color: $white;
+    background: $blue;
 }
 
-.text-xl {
-    font-size: #{$scale * $scale}em;
-}
-
-.text-xxl {
-    font-size: #{$scale * $scale * $scale}em;
-}
-
-* {
-    @extend .text-m;
-}
-
-h1 {
-    @extend .text-xxl;
-}
-
-h2 {
-    @extend .text-xl;
-}
-
-h3,
-h4,
-h5,
-h6 {
-    @extend .text-l;
-}
-
-small {
-    @extend .text-s;
+::selection {
+    color: $white;
+    background: $blue;
 }
 
 // Text Styles
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-    font-weight: $font-weight-normal;
+h6,
+strong,
+em,
+b {
+    font-weight: $font-weight-bold;
 }

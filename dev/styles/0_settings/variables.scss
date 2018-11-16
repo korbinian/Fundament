@@ -1,13 +1,24 @@
-//	VARIABLES 
+//	VARIABLES
 ////////////////////////////////////////////////////////////////////////////////
+
 // colors
+
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
 $blue: rgb(0, 0, 255);
+
+$color-text: $black;
+
+// page widths
+
 $page-width-s: 640;
 $page-width-m: 960;
 $page-width-l: 1200;
+
+$page-width: 60rem;
+
 // breakpoints
+
 $breakpoint-s: 720;
 $breakpoint-m: 960;
 $breakpoint-l: 1080;
@@ -20,32 +31,64 @@ $bp-desktop-s: 1200px;
 $bp-desktop-m: 1800px;
 $bp-desktop-l: 2400px;
 $bp-desktop-xl: 3600px;
+
 // font stacks
-$font-stack-display: arial, helvetica;
-$font-stack-copy: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+$font-stack-arial: arial, helvetica;
+$font-stack-ui: "Inter UI", sans-serif;
+$font-stack-ui-var: "Inter UI var", sans-serif;
+$font-stack-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $font-stack-code: monospace;
-$font-stack-placeholder: "BLOKK";
+
+$font-stack-copy: $font-stack-ui-var;
+$font-stack-display: $font-stack-ui-var;
+
 // font sizes
+
 $font-size-s: 12px;
-$line-height-m: 1.25;
-$font-size-max: 20;
+
 $font-size-min: 16;
-$page-width: 60rem;
+$font-size-max: 20;
+
+// line heights
+
+$line-height-m: 1.25;
+
 // typographic scale
+
 $scale: 1.25;
-$spacing-xs: .25rem;
-$spacing-s: .5rem;
+
+// spacing
+
+$spacing-xs: 0.25rem;
+$spacing-s: 0.5rem;
 $spacing-m: 1rem;
 $spacing-l: 2rem;
 $spacing-xl: 4rem;
 $spacing-xxl: 8rem;
+
+// font-weights
+
 $font-weight-thin: 100;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-semibold: 500;
 $font-weight-bold: 700;
 $font-weight-black: 900;
+
+$font-weight-100: 100;
+$font-weight-200: 200;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-weight-800: 800;
+$font-weight-900: 900;
+
 // display sizes
+
 $iphone4-width: 320px;
 $iphone4-height: 480px;
 $iphone5-width: 320px;
