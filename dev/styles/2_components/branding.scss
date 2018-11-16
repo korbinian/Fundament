@@ -1,0 +1,23 @@
+/*	BRANDING 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.site-branding {
+    .site-branding__logo {
+        width: 16rem;
+        height: 16rem;
+        @media (max-width: 959px) {
+            width: 8rem; // max-width 128px
+            height: 8rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .site-branding__logo--fallback {
+    }
+    .site-branding__title {
+    }
+    .site-branding__tagline {
+    }
+}

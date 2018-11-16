@@ -1,7 +1,6 @@
 /*	HELPERS 
 //////////////////////////////////////////////////////////////////////////////*/
 
-
 /* Debug Classes */
 
 .icon-grid {
@@ -26,13 +25,30 @@
     right: 0;
     bottom: 0;
     left: 0;
-    transition: opacity .5s;
+    transition: opacity 0.5s;
     pointer-events: none;
     opacity: 1;
     margin: 0 auto;
     @media (min-width: 960px) {
-        background: url('../assets/grid-64rem_1280px.svg') repeat-y;
+        background: url("../assets/grid-64rem_1280px.svg") repeat-y;
         max-width: 64rem;
         background-size: 100%;
+    }
+}
+
+// outline elements with class-names starting with "site-"
+
+[class^="site-"] {
+    position: relative;
+    outline: 1px solid;
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        content: attr(class);
+        font-family: $font-stack-code;
+        font-size: $font-size-m;
+        font-weight: $font-weight-500;
     }
 }

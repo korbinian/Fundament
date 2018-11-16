@@ -5,30 +5,20 @@
 //
 //  px  on root
 //  rem on everything else
+// Single variable font with static fallback
+// https://rsms.me/inter/var-test.html
 
 :root {
     $map: (
-        320px: 14px,
-        540px: 16px,
-        840px: 16px,
-        1200px: 20px,
-        1800px: 24px,
-        2400px: 30px,
-        3600px: 36px
+        320px: 12px,
+        1600px: 16px
     );
     @include poly-fluid-sizing("font-size", $map);
-    line-height: $line-height-m;
-}
-
-// Single variable font with static fallback.
-
-body {
     font-family: $font-stack-ui;
     font-weight: $font-weight-normal;
     color: $color-text;
-}
-@supports (font-variation-settings: normal) {
-    body {
+    line-height: $line-height-m;
+    @supports (font-variation-settings: normal) {
         font-family: $font-stack-ui-var;
     }
 }
@@ -60,4 +50,14 @@ strong,
 em,
 b {
     font-weight: $font-weight-bold;
+}
+
+// Web Font Loader
+// https://github.com/typekit/webfontloader
+
+.wf-loading {
+}
+.wf-active {
+}
+.wf-inactive {
 }
