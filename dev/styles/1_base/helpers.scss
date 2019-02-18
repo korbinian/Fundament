@@ -6,12 +6,18 @@
 .icon-grid {
     position: fixed;
     z-index: 99999;
-    bottom: $spacing-m;
-    left: $spacing-m;
-    width: $spacing-l;
-    height: $spacing-l;
+    bottom: $spacing-s;
+    left: $spacing-s;
+    width: $spacing-m;
+    height: $spacing-m;
     cursor: pointer;
-    background: red;
+    background: $white;
+    display: none;
+    background-image: url("../images/icons/icon--grid.svg");
+    background-size: 1rem 1rem;
+    @media (min-width: 1120px) {
+        display: block;
+    }
 }
 
 .overlay {
@@ -29,26 +35,45 @@
     pointer-events: none;
     opacity: 1;
     margin: 0 auto;
-    @media (min-width: 960px) {
-        background: url("../assets/grid-64rem_1280px.svg") repeat-y;
-        max-width: 64rem;
+    @media (min-width: 1120px) {
+        background: url("../assets/grid-1120px.svg") repeat-y;
+        max-width: $page-width;
         background-size: 100%;
     }
 }
 
 // outline elements with class-names starting with "site-"
 
-[class^="site-"] {
-    position: relative;
-    outline: 1px solid;
-    &:after {
-        position: absolute;
-        top: 0;
-        right: 0;
+.icon-sections {
+    position: fixed;
+    z-index: 99999;
+    bottom: $spacing-s;
+    right: $spacing-s;
+    width: $spacing-m;
+    height: $spacing-m;
+    cursor: pointer;
+    background: $white;
+    display: none;
+    background-image: url("../images/icons/icon--sections.svg");
+    background-size: 1rem 1rem;
+    @media (min-width: 1120px) {
         display: block;
-        content: attr(class);
-        font-family: $font-stack-code;
-        font-size: $font-size-m;
-        font-weight: $font-weight-500;
+    }
+}
+
+.has-sections_overlay {
+    [class^="site-"] {
+        position: relative;
+        outline: 1px solid;
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            content: attr(class);
+            font-family: $font-stack-code;
+            font-size: $font-size-m;
+            font-weight: $font-weight-500;
+        }
     }
 }

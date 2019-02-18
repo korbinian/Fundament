@@ -11,15 +11,15 @@
 :root {
     $map: (
         320px: 12px,
-        1600px: 16px
+        1120px: 16px
     );
     @include poly-fluid-sizing("font-size", $map);
-    font-family: $font-stack-ui;
+    font-family: $font-stack-copy;
     font-weight: $font-weight-normal;
     color: $color-text;
     line-height: $line-height-m;
     @supports (font-variation-settings: normal) {
-        font-family: $font-stack-ui-var;
+        //font-family: $font-stack-ui-var;
     }
 }
 
@@ -55,9 +55,15 @@ b {
 // Web Font Loader
 // https://github.com/typekit/webfontloader
 
+html {
+    opacity: 0;
+}
+
 .wf-loading {
 }
 .wf-active {
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 .wf-inactive {
 }
