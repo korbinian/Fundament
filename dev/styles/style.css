@@ -45,8 +45,7 @@ article, aside, footer, header, nav, section, figcaption, figure, main, details,
   }
 }
 
-code,
-pre {
+code, pre {
   font-family: monospace;
 }
 
@@ -60,16 +59,19 @@ pre {
   background: blue;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-em,
-b {
+h1, h2, h3, h4, h5, h6, strong, em, b {
   font-weight: 700;
+}
+
+p {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
 }
 
 html {

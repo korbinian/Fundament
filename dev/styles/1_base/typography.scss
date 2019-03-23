@@ -7,12 +7,8 @@
 //  rem on everything else
 // Single variable font with static fallback
 // https://rsms.me/inter/var-test.html
-
 :root {
-    $map: (
-        320px: 12px,
-        1120px: 16px
-    );
+    $map: ( 320px: 12px, 1120px: 16px);
     @include poly-fluid-sizing("font-size", $map);
     font-family: $font-stack-copy;
     font-weight: $font-weight-normal;
@@ -23,8 +19,7 @@
     }
 }
 
-code,
-pre {
+code, pre {
     font-family: $font-stack-code;
 }
 
@@ -39,31 +34,30 @@ pre {
 }
 
 // Text Styles
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-em,
-b {
+h1, h2, h3, h4, h5, h6, strong, em, b {
     font-weight: $font-weight-bold;
+}
+
+// hyphenation
+p {
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;
+    hyphenate-limit-zone: 8%;
 }
 
 // Web Font Loader
 // https://github.com/typekit/webfontloader
-
 html {
     opacity: 0;
 }
 
-.wf-loading {
-}
+.wf-loading {}
+
 .wf-active {
     opacity: 1;
     transition: opacity 0.3s;
 }
-.wf-inactive {
-}
+
+.wf-inactive {}
