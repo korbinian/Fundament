@@ -3,9 +3,20 @@
 
 html {
     box-sizing: border-box;
-    touch-action: manipulation;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex]:not([tabindex='-1']) {
+  touch-action: manipulation;
 }
 
 *,
@@ -14,10 +25,24 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    margin: 0;
+*:not(input) {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
-article, aside, footer, header, nav, section, figcaption, figure, main, details, menu {
-    display: block;
+[tabindex='-1']:focus {
+  outline: none !important;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
 }

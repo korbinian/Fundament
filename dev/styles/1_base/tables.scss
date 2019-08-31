@@ -1,2 +1,14 @@
 /*	TABLES 
 //////////////////////////////////////////////////////////////////////////////*/
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  font-feature-settings: 'onum' 0, 'pnum' 0, 'lnum', 'tnum', 'zero';
+  font-variant-numeric: lining-nums tabular-nums slashed-zero;
+}
+
+
+

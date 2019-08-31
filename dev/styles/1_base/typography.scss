@@ -7,13 +7,19 @@
 //  rem on everything else
 // Single variable font with static fallback
 // https://rsms.me/inter/var-test.html
+
 :root {
     $map: ( 320px: 12px, 1120px: 16px);
     @include poly-fluid-sizing("font-size", $map);
     font-family: $font-stack-copy;
     font-weight: $font-weight-normal;
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum', 'pnum';
+    font-kerning: normal; 
+    font-variant-ligatures: common-ligatures contextual;
+    font-variant-numeric: oldstyle-nums proportional-nums;
     color: $color-text;
     line-height: $line-height-m;
+    
     @supports (font-variation-settings: normal) {
         //font-family: $font-stack-ui-var;
     }
@@ -21,6 +27,18 @@
 
 code, pre {
     font-family: $font-stack-code;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: $font-stack-code;
+    font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-feature-settings: 'kern' 0, 'liga' 0, 'clig' 0, 'onum' 0, 'pnum' 0, 'tnum', 'lnum', 'zero';
+    font-kerning: none;
+    font-variant-ligatures: contextual;
+    font-variant-numeric: lining-nums tabular-nums slashed-zero;
 }
 
 ::-moz-selection {
@@ -33,9 +51,43 @@ code, pre {
     background: $blue;
 }
 
-// Text Styles
-h1, h2, h3, h4, h5, h6, strong, em, b {
-    font-weight: $font-weight-bold;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+em, 
+b, 
+i
+ {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  font-style: normal;
+}
+
+small {
+  font-size: 100%;
+}
+
+@supports (font-variant-position: sub) and (font-variant-position: super) {
+  sub,
+  sup {
+    font-size: 100%;
+    line-height: inherit;
+    position: static;
+  }
+
+  sub {
+    font-variant-position: sub;
+  }
+
+  sup {
+    font-variant-position: super;
+  }
 }
 
 // hyphenation
@@ -61,3 +113,8 @@ html {
 }
 
 .wf-inactive {}
+
+
+
+
+

@@ -1,2 +1,18 @@
 /*	MEDIA 
 //////////////////////////////////////////////////////////////////////////////*/
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: bottom;
+}
